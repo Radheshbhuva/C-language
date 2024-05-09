@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+#define Mn main
+#define Pf printf
+#define G getch
+#define Cr clrscr
+#define Wt width
+#define Lt length
+
+Mn()
+{
+	const int Lt = 10;
+	const int Wt = 20;
+
+	Pf("Length: %d\n", Lt);
+	Pf("Width: %d\n",Wt);
+	Pf("Area of the rectangle: %d\n", calculateArea(Lt,Wt));
+
+	G();
+}
