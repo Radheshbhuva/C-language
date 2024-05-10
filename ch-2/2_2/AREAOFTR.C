@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <conio.h>
+#define pf printf
+#define sf scanf
+#define cl clrscr
+Main()
+{
+	float base, height, area, R;
+	float t = 2;
+	cl();
+
+//Taking a value of Base & Height from User
+
+	pf("Enter the value of Base of Triangle : ");
+	sf("%f", &base);
+
+	pf("Enter the value of Height of Triangle : ");
+	sf("%f", &height);
+
+//calculate the area of Triangle
+
+	R = base * height;
+	area = R/t;
+
+	pf("The area of Triangle is: %.2f\n", area);
+
+	getch();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
