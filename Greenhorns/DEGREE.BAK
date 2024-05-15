@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <conio.h>
+#define pf printf
+#define sf scan
+main()
+{
+float celsius, fahrenheit;
+	clrscr();
+pf("Enter temperature value in degree Celsius");
+
+	//Now take the value from the user
+
+sf("%f", &celsius);
+
+	//convert the temperature in to fahenheit
+
+fahrenheit = (celsius * 9/5) + 32;
+
+	//Print the result
+
+pf("The temperature in Fahrenheit :%.2f \n", fahrenheit);
+	getch();
+}
+
