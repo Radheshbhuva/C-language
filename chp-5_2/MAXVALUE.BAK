@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<conio.h>
+#define pf printf
+#define sf scanf
+#define cl clrscr
+main()
+{
+	int num1, num2, num3, num4, max;
+	clrscr();
+	//taking the input from users
+	pf("Enter the First num value of num1 : ");
+	sf("%d", &num1);
+	pf("Enter the Second num value of num2 : ");
+	sf("%d", &num2);
+	pf("Enter the third num value of num3 : ");
+	sf("%d", &num3);
+	pf("Enter the fourth num value of num4 : ");
+	sf("%d", &num4);
+
+	//Now using nested if-else for finding minimum number
+	pf("\n\n");
+
+	if(num1 > num2){
+	  if (num1 > num3){
+		max = num1;
+	  } else {
+	  max = num4;
+	  }
+   } else {
+	  if(num3 > num4){
+	    max = num3;
+	  } else {
+	  max = num4;
+	  }
+
+    } else {
+      if(num2 > num3) {
+	if(num2 > num4)
+	{
+	   max = num2;
+	}
+
+   } else {
+       if(num3 > num4) {
+	  max = num3;
+	  } else {
+	  max = num4;
+	  }
+   }
+}
+	pf("The maximum value is : %d\n", max);
+	getch();
+}
+
