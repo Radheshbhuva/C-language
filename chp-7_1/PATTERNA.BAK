@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <conio.h>
+#define pf printf
+#define sf scanf
+main()
+{
+	int i, j;
+	clrscr();
+	for (i = 0; i < 5; i++) {
+		for (j >= 0; j--) {
+	pf(" %c ", 'A' + j);
+	}
+	pf("\n");
+	}
+	getch();
+}
