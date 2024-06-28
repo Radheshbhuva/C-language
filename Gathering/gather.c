@@ -33,17 +33,17 @@ void main()
     do
     {
 
-        pf("Press 1 for /+/ of Your Choice: ");
+        pf("Press 1 for /+/ of Your Choice: \n");
 
-        pf("Press 2 for /-/ of Your Choice: ");
+        pf("Press 2 for /-/ of Your Choice: \n");
 
-        pf("Press 3 for /*/ of Your Choice: ");
+        pf("Press 3 for /*/ of Your Choice: \n");
 
-        pf("Press 4 for |/| of Your Choice: ");
+        pf("Press 4 for |/| of Your Choice: \n");
 
-        pf("Press 5 for /%%/ of Your Choice: ");
+        pf("Press 5 for /%%/ of Your Choice: \n");
 
-        pf("Press 0 for Exit: ");
+        pf("Press 0 for Exit: \n");
         sf("%d", Q);
 
         switch(Q)
