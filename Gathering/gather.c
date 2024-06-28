@@ -46,7 +46,7 @@ void main()
         pf("Press 0 for Exit: ");
         sf("%d", Q);
 
-        Switch(Q)
+        switch(Q)
         {
         case 1:
             pf("Enter Your First Choice: ");
@@ -88,6 +88,10 @@ void main()
             sf("%d", &b);
             modu(a, b);
             break;
+            default:
+                if (Q != 0) {
+                    printf("Invalid choice. Please try again.\n");
+                }
         }
-    }
+    } while (Q != 0);
 }
