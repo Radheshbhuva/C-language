@@ -2,96 +2,103 @@
 #define pf printf
 #define sf scanf
 
-void add(int a, int b)
-{
-    pf("Addition of Your Choices %d & %d is %d", a, b, a + b);
-}
+int sum(int a1, int a2);
+int sub(int a1, int a2);
+int multi(int a1, int a2);
+int divi(int a1, int a2);
+int modul(int a1, int a2);
 
-void sub(int a, int b)
+main()
 {
-    pf("Subtractiuon of Your Choices %d & %d is %d", a, b, a - b);
-}
+    int calculator, a1, a2;
 
-void mul(int a, int b)
-{
-    pf("Multiplication of Your Choices %d & %d is %d", a, b, a * b);
-}
-
-void div(int a, int b)
-{
-    pf("Division of Your Choices %d & %d is %d", a, b, a / b);
-}
-
-void modu(int a, int b)
-{
-    pf("Modulus of Your Choices %d & %d is %d", a, b, a % b);
-}
-
-void main()
-{
-    int a, b, Q;
     do
     {
+        pf("Press 1 for + \n");
+        pf("Press 2 for - \n");
+        pf("Press 3 for * \n");
+        pf("Press 4 for / \n");
+        pf("Press 5 for %%\n");
+        pf("Press 0 for Exit\n\n");
 
-        pf("Press 1 for /+/ of Your Choice: \n");
+        pf("Enter your Choice: ");
+        sf("%d", &calculator);
+        if (calculator != 0)
+        {
+            pf("\n");
 
-        pf("Press 2 for /-/ of Your Choice: \n");
+            pf("Enter the First number: ");
+            sf("%d", &a1);
 
-        pf("Press 3 for /*/ of Your Choice: \n");
+            pf("\n");
 
-        pf("Press 4 for |/| of Your Choice: \n");
+            pf("Enter the Second number: ");
+            sf("%d", &a2);
 
-        pf("Press 5 for /%%/ of Your Choice: \n");
-
-        pf("Press 0 for Exit: \n");
-        sf("%d", Q);
-
-        switch(Q)
+            pf("\n");
+        }
+        switch (calculator)
         {
         case 1:
-            pf("Enter Your First Choice: ");
-            sf("%d", &a);
 
-            pf("Enter Your Second Choice:");
-            sf("%d", &b);
-            add(a, b);
+            sum(a1, a2);
+
             break;
+
         case 2:
-            pf("Enter Your First Choice: ");
-            sf("%d", &a);
 
-            pf("Enter Your Second Choice:");
-            sf("%d", &b);
-            sub(a, b);
+            sub(a1, a2);
+
             break;
+
         case 3:
-            pf("Enter Your First Choice: ");
-            sf("%d", &a);
 
-            pf("Enter Your Second Choice:");
-            sf("%d", &b);
-            mul(a, b);
+            mult(a1, a2);
+
             break;
+
         case 4:
-            pf("Enter Your First Choice: ");
-            sf("%d", &a);
 
-            pf("Enter Your Second Choice:");
-            sf("%d", &b);
-            div(a, b);
+            divi(a1, a2);
+
             break;
+
         case 5:
-            pf("Enter Your First Choice: ");
-            sf("%d", &a);
 
-            pf("Enter Your Second Choice:");
-            sf("%d", &b);
-            modu(a, b);
+            modulus(a1, a2);
+
             break;
-            default:
-                if (Q != 0) {
-                    printf("Invalid choice. Please try again.\n");
-                }
+
+        case 0:
+
+            pf("You are exited from the Calculator \n");
         }
-    } while (Q != 0);
+    } while (calculator != 0);
+}
+int sum(int a1, int a2)
+{
+    pf("Addition of %d and %d is: %d\n\n", a1, a2, a1 + a2);
+}
+int sub(int a1, int a2)
+{
+    pf("Substraction of %d and %d is: %d\n\n", a1, a2, a1 - a2);
+}
+int mult(int a1, int a2)
+{
+    pf("Multiplication of %d and %d is: %d\n\n", a1, a2, a1 * a2);
+}
+int divi(int a1, int a2)
+{
+    if (a2 != 0)
+    {
+        pf("Division of %d and %d is: %d\n\n", a1, a2, a1 / a2);
+    }
+    else
+    {
+        pf("Can't divide by zero\n\n");
+    }
+}
+int modulus(int a1, int a2)
+{
+    pf("modulus of %d and %d is: %d\n\n", a1, a2, a1 % a2);
 }
